@@ -1,0 +1,169 @@
+@import './Variables.scss';
+
+.Footer{
+    height: 35dvh;
+    border-radius: 24px 24px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    position: relative;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 88.20641320030968%);
+    .BackgroundFooter{
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        background-color: black;
+        img{
+            width: 75%;
+            filter: brightness(.4);
+        }
+    }
+    p{
+        color: $background;
+        font-weight: lighter;
+    }
+    .FooterCont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 100%;
+        gap: 10px;
+        .LogoyTexto{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            .Logo{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-end;
+                height: 100%;
+                gap: 15px;
+                .ImgCont{
+                    height: 33px;
+                    img{
+                        height: 100%;
+                    }
+                }
+                .TextoLogo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    p{
+                        font-family: 'monument-extended', sans-serif;
+                        font-size: 18px;
+                        line-height: 0.95em;
+                    }
+                }
+            }
+            .Texto{
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                p{
+                    font-weight: 300;
+                }
+            }
+        }
+        .Divider{
+            background: radial-gradient(50% 50% at 50% 50%, $background 0%, transparent);
+        }
+        
+        
+        $bar-count: 80;
+        $center: ceil(calc($bar-count / 2)); // Barra central
+
+        .music {
+        width: 100%;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .bar {
+            width: 8px; // Ajusta el ancho de las barras si es necesario
+            border-radius: 10px;
+            background: white;
+            animation: loader 1.25s ease-in-out infinite;
+
+            @for $i from 1 through $bar-count {
+            $distance: abs($i - $center);
+            $delay: (calc($distance / $center)) * 1.75s;
+            
+            &:nth-child(#{$i}) {
+                animation-delay: $delay;
+            }
+            }
+        }
+        }
+        @keyframes loader { 
+            0%, 100% {
+              height: 2px;
+            }
+          
+            25% {
+              height: 100px;
+            }
+          }
+    }
+}
+
+@media (max-width: 767px) {
+    body{
+        .Footer{
+            p{
+                text-align: center;
+            }
+            width: 100%;
+            .FooterCont{
+                .LogoyTexto{
+                    flex-direction: column;
+                    gap: 20px;
+                    .Logo{
+                        .TextoLogo{
+                            p{
+                                font-size: 18px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .Texto{
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+                }
+                width: 100%;
+                .music{
+                    .bar{
+                        width: 1px;
+                    }
+                }
+            }
+        }
+      }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body{
+        .Footer{
+            width: 100%;
+            .FooterCont{
+                width: 100%;
+                .music{
+                    display: none;
+                }
+            }
+        }
+      }
+} 

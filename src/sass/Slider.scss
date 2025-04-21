@@ -1,0 +1,31 @@
+@import './Variables.scss';
+
+
+.swiper_container {
+  position: relative;
+  display: flex !important;  // Asegura que el contenedor del Swiper utilice Flexbox
+  justify-content: center; // Centra los elementos dentro del contenedor
+  width: 100% !important;
+  height: 100%;
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  display: flex !important; // Asegura que los elementos deslizables utilicen Flexbox
+  overflow: visible;
+  justify-content: center; // Centra el contenido dentro de cada slide
+  align-items: center; // Centra verticalmente el contenido dentro de cada slide
+}
+.swiper-slide {
+  display: flex !important; // Asegura que los elementos deslizables utilicen Flexbox
+  overflow: visible;
+  justify-content: center; // Centra el contenido dentro de cada slide
+  align-items: center; // Centra verticalmente el contenido dentro de cada slide
+}
+.swiper-slide-fully-visible {
+  height: 100% !important;
+}
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}

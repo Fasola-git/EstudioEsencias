@@ -1,0 +1,412 @@
+@import './Variables.scss';
+
+.Head{
+    height: 9.2dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    .Header-divider{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        .Header{
+            background-color: $background;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            height: 100%;
+            .Left{
+                display: flex;
+                gap: 3rem;
+                width: 50%;
+                .Logo{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 5%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .Right{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+            }
+        }
+    }
+    
+    
+    .RedesContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+        .Redes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            a{
+                font-size: 25px;
+                transition: 0.2s;
+                &.fa-youtube:hover{
+                    color: rgb(250, 50, 50);
+                }
+                &.fa-instagram
+                {
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+                &:hover{
+                    color: transparent;
+                }
+                &.fa-facebook:hover{
+                    color: rgb(102, 133, 255);
+                }
+            }
+        }
+    }
+    nav{
+        display: flex;
+        width: 100%;
+        gap: 35px;
+        justify-content: flex-end;
+        align-self: center;
+        height: 47px;
+        opacity: 1;
+        overflow: hidden;
+        a{
+            position: relative;
+            border-radius: 17px;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            align-self: center;
+            height: 100%;
+            overflow: hidden;
+            background-color: $background;
+            border-radius: 16px;
+            z-index: 2;
+            .Animacion{
+                background: conic-gradient(from 0deg at 50% 50%, rgb(255, 255, 255) 0deg, rgba(250, 255, 254, 0) 222.8390071640304deg, var(--token-bb130554-21e5-4895-9d9d-97a5790462dd, rgb(49, 49, 77)) /* {"name":"Azul logo"} */ 323.1081081081081deg);
+                animation: amm 6s linear infinite;
+                border-radius: 17px; 
+                position: absolute;
+                rotate: 90deg;
+                height: 400%;
+                width: 250%;
+                top: -150%;
+                left: -75%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow-y: hidden;
+                overflow-x: hidden;
+                z-index: 1;
+            }
+            .TextoNav{
+                display: flex;
+                justify-content: center;
+                background-color: $background;
+                align-self: center;
+                width: calc(100% - 2px);
+                height: calc(100% - 2px);
+                z-index: 2;
+                border-radius: 16px;
+                p{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 8px;
+                }
+            }
+        }
+
+    }
+    .MobCont{
+        display: none;
+    }
+}
+
+
+
+@keyframes amm {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 767px) {
+    body{
+        header {
+        &.Head{
+            transition: height 0.3s ease;
+            .Header-divider {
+                display: none;
+                width: 0;
+                .Header{
+                    display: none;
+                }
+            }
+            .Hamb{
+                width: 100%;
+                .MobCont{
+                    transition: height 0.3s ease;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 30px;
+                    height: 100%;
+                    .Top{
+                        display: flex;
+                        transition: opacity 0.3s ease 0.3s;
+                        opacity: 0;
+                        nav{
+                            gap: 25px;
+                            flex-direction: column;
+                            height: 100%;
+                            a{
+                                height: 30px;
+                            }
+                        }
+                    }
+                    .Bottom{
+                        transition: opacity 0.3s ease 0.3s;
+                        opacity: 0;
+                        .RedesContainer{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                        }
+                    }
+                    .MobNav{
+                        width: 100%;
+                        left: 0px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        .MobIcon{
+                            width: 30px;
+                            margin-left: 15%;
+                        }
+                        .HambIcon{
+                            margin-right: 15%;
+                            --gap: 5px;
+                            --height-bar: 2.5px;
+                            --pos-y-bar-one: 0;
+                            --pos-y-bar-three: 0;
+                            --scale-bar: 1;
+                            --rotate-bar-one: 0;
+                            --rotate-bar-three: 0;
+                            width: 25px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: var(--gap);
+                            cursor: pointer;
+                            position: relative;
+                            .bar {
+                                position: relative;
+                                height: var(--height-bar);
+                                width: 100%;
+                                border-radius: .5rem;
+                                background-color: $accent;
+                            }
+                            
+                            .bar--1 {
+                                top: var(--pos-y-bar-one);
+                                transform: rotate(var(--rotate-bar-one));
+                                transition: top 200ms 100ms, transform 100ms;
+                            }
+                            
+                            .bar--2 {
+                                transform: scaleX(var(--scale-bar));
+                                transition: transform 150ms 100ms;
+                            }
+                            
+                            .bar--3 {
+                                bottom: var(--pos-y-bar-three);
+                                transform: rotate(var(--rotate-bar-three));
+                                transition: bottom 200ms 100ms, transform 100ms;
+                            }
+                            &.Activo{
+                                --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+                                --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+                                --scale-bar: 0;
+                                --rotate-bar-one: 45deg;
+                                --rotate-bar-three: -45deg;
+                                .bar--1{
+                                    transition: top 200ms, transform 200ms 100ms;
+                                }
+                                .bar--3{
+                                    transition: bottom 200ms, transform 200ms 100ms;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                &.Activo{
+                    .Top{
+                        opacity: 1;
+                    }
+                    .Bottom{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+  
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body{
+        header {
+        &.Head{
+            transition: height 0.3s ease;
+            .Header-divider {
+                display: none;
+                width: 0;
+                .Header{
+                    display: none;
+                }
+            }
+            .Hamb{
+                width: 100%;
+                .MobCont{
+                    transition: height 0.3s ease;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 30px;
+                    height: 100%;
+                    .Top{
+                        display: flex;
+                        transition: opacity 0.3s ease 0.3s;
+                        opacity: 0;
+                        nav{
+                            gap: 25px;
+                            flex-direction: column;
+                            height: 100%;
+                            a{
+                                height: 30px;
+                            }
+                        }
+                    }
+                    .Bottom{
+                        transition: opacity 0.3s ease 0.3s;
+                        opacity: 0;
+                        .RedesContainer{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                        }
+                    }
+                    .MobNav{
+                        width: 100%;
+                        left: 0px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        .MobIcon{
+                            width: 30px;
+                            margin-left: 15%;
+                        }
+                        .HambIcon{
+                            margin-right: 15%;
+                            --gap: 5px;
+                            --height-bar: 2.5px;
+                            --pos-y-bar-one: 0;
+                            --pos-y-bar-three: 0;
+                            --scale-bar: 1;
+                            --rotate-bar-one: 0;
+                            --rotate-bar-three: 0;
+                            width: 25px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: var(--gap);
+                            cursor: pointer;
+                            position: relative;
+                            .bar {
+                                position: relative;
+                                height: var(--height-bar);
+                                width: 100%;
+                                border-radius: .5rem;
+                                background-color: $accent;
+                            }
+                            
+                            .bar--1 {
+                                top: var(--pos-y-bar-one);
+                                transform: rotate(var(--rotate-bar-one));
+                                transition: top 200ms 100ms, transform 100ms;
+                            }
+                            
+                            .bar--2 {
+                                transform: scaleX(var(--scale-bar));
+                                transition: transform 150ms 100ms;
+                            }
+                            
+                            .bar--3 {
+                                bottom: var(--pos-y-bar-three);
+                                transform: rotate(var(--rotate-bar-three));
+                                transition: bottom 200ms 100ms, transform 100ms;
+                            }
+                            &.Activo{
+                                --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+                                --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+                                --scale-bar: 0;
+                                --rotate-bar-one: 45deg;
+                                --rotate-bar-three: -45deg;
+                                .bar--1{
+                                    transition: top 200ms, transform 200ms 100ms;
+                                }
+                                .bar--3{
+                                    transition: bottom 200ms, transform 200ms 100ms;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                &.Activo{
+                    .Top{
+                        opacity: 1;
+                    }
+                    .Bottom{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+/* Desktop (1025px en adelante) */
+@media (min-width: 1025px) {
+    body{
+        header {
+        &.Head{
+            .Header-divider{
+                display: inline;
+            }
+        }
+        }
+    }
+}

@@ -1,0 +1,353 @@
+@import './Variables.scss';
+
+.Servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  min-height: 60dvh;
+  .ContentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    .Background{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.6;
+        top: 80px;
+        width: 100%;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
+    }
+    .CaruselContainer {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .Carusel, .SliderCont {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        padding: 40px 0px;
+        .CaruselItemExtendido {
+          .CaruselItem {
+            border: 1px solid black;
+            border-radius: 16px;
+            padding: 16px;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            width: 262.5px;
+            height: 175px;
+            .CaruselContent {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              img {
+                width: 100%;
+                max-width: 275px;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+              }
+              .CaruselTexto {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+                background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                .DivTexto {
+                  height: min-content;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: flex-end;
+                  svg {
+                    width: 32px;
+                    height: 32px;
+                    g {
+                      fill: $background;
+                    }
+                  }
+                  p {
+                    color: $background;
+                    font-size: 24px;
+                    font-weight: bold;
+                  }
+                  padding: 0 16px 16px 16px;
+                }
+              }
+            }
+          }
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          transition: transform 0.3s ease;
+          transform-origin: center;
+          &:hover {
+            transform: scale(1.05);
+            .DetallesContainer {
+                margin-bottom: 5dvh;
+                &[id="1"] {
+                    height: (24px * 9 + 20px * 2);
+                }
+                &[id="2"] {
+                    height: (24px * 7 + 20px * 2);
+                }
+                &[id="3"] {
+                    height: (24px * 2 + 20px * 5);
+                    margin-bottom: 6dvh;
+                }
+                &[id="4"] {
+                    height: (24px * 3 + 20px * 2);
+                    margin-bottom: 15dvh;
+                }
+                .Detalle {
+                    display: flex;
+                    opacity: 0;
+                    visibility: hidden;
+                    .DivIconos{
+                      display: grid;
+                      justify-content: center;
+                      grid-auto-columns: 1fr; 
+                      grid-auto-rows: 1fr; 
+                      grid-template-columns: repeat(3, 60px);
+                      grid-template-rows: repeat(3, 35px); 
+                      gap: 15px; 
+                      grid-template-areas: 
+                      "i1 i2 i3"
+                      "i4 i5 i6 "
+                      "i7 i8 ."; 
+                      .fa-brands{
+                        color: $text;
+                        font-size: 35px;
+                      }
+                      #i1 {
+                        grid-area: i1;
+                      }
+                      #i2 {
+                        grid-area: i2;
+                      }
+                      #i3 { 
+                        grid-area: i3;
+                      }
+                      #i4 {
+                        grid-area: i4; 
+                      }
+                      #i5 {
+                        grid-area: i5;
+                      }
+                      #i6 {
+                        grid-area: i6;
+                      }
+                      #i6 {
+                        grid-area: i7;
+                      }
+                      #i6 {
+                        grid-area: i8;
+                      }
+                    }
+                    &.detalle-1{
+                        .Punto {
+                        opacity: 0;
+                        animation: puntoExpand 0.2s ease-in-out forwards 0.5s;
+                        }
+                        .Texto {
+                        opacity: 0;
+                        animation: textoSlideIn 0.3s ease-in-out forwards 0.7s;
+                        }
+                    }
+                    &.detalle-2{
+                        .Punto {
+                        opacity: 0;
+                        animation: puntoExpand 0.2s ease-in-out forwards .8s;
+                        }
+                        .Texto {
+                        opacity: 0;
+                        animation: textoSlideIn 0.5s ease-in-out forwards 1s;
+                        }
+                    }
+                    &.detalle-3{
+                        .Punto {
+                            opacity: 0;
+                            animation: puntoExpand 0.2s ease-in-out forwards 1.3s;
+                        }
+                        .Texto {
+                            opacity: 0;
+                            animation: textoSlideIn 0.5s ease-in-out forwards 1.5s;
+                        }
+                    }
+                    &.detalle-4{
+                        .Punto {
+                            opacity: 0;
+                            animation: puntoExpand 0.2s ease-in-out forwards 1.8s;
+                        }
+                        .Texto {
+                            opacity: 0;
+                            animation: textoSlideIn 0.5s ease-in-out forwards 2s;
+                        }
+                    }
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+          }
+          .DetallesContainer {
+            border-left: 1px solid black;
+            transition: height 0.5s ease;
+            width: 70%;
+            height: 0;
+            margin-bottom: 20px;
+            .Detalle {
+              flex-direction: row;
+              justify-content: space-between;
+              padding-top: 20px;
+              visibility: hidden;
+              .Punto {
+                position: absolute;
+                left: 13.5%;
+                width: 10px;
+                height: 10px;
+                background-color: black;
+                border-radius: 100%;
+              }
+              .Texto {
+                padding-left: 10%;
+                display: flex;
+                flex-direction: column;
+                text-wrap: nowrap;
+                p {
+                  font-size: 24px;
+                  font-weight: 300;
+                }
+                .Subtexto {
+                  font-size: 20px;
+                }
+              }
+              .Iconos {
+                display: grid;
+              }
+            }
+          }
+        }
+      }
+      .Divider:nth-of-type(4){
+        margin-bottom: 10dvh;
+        height: 1px;
+      }
+    }
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Asegúrate de evitar el desbordamiento horizontal */
+}
+
+// Definimos las animaciones para el punto y el texto
+@keyframes puntoExpand {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes textoSlideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 767px) {
+  body{
+    .Servicios{
+      .ContentContainer{
+        .CaruselContainer{
+          width: 100%;
+          .Carusel{
+            display: none;
+          }
+          .SliderCont{
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            .CaruselItemExtendido{
+              max-width: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) { 
+  
+    body{
+      .Servicios{
+        .ContentContainer{
+          .CaruselContainer{
+            width: 100%;
+            .Carusel{
+              display: none;
+            }
+            .SliderCont{
+              width: 100%;
+              min-height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              .CaruselItemExtendido{
+                max-width: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+/* Desktop (1025px en adelante) */
+@media (min-width: 1025px) {
+  body{
+    .Servicios{
+      .ContentContainer{
+        .CaruselContainer{
+            .SliderCont{
+              display: none;
+            }
+        }
+      }
+    }
+  }
+}

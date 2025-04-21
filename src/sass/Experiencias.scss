@@ -1,0 +1,315 @@
+@import './Variables.scss';
+
+.Experiencias {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2dvh;
+    .ExperienciasContainer{
+        border: 1px solid black;
+        border-radius: 34px;
+        padding: 48px 32px;
+        margin: 0 10% 0 10%;
+        min-height: 65dvh;
+        width: 76.5%;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(255, 255, 255, 0.6);
+        h3{
+            font-size: 32px;
+            font-weight: light;
+        }
+        .Divider{
+            transform: rotate(90deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .Artistas{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            gap: 32px;
+            position: relative;
+            .VideoContainer{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                display: grid;
+                justify-content: center;
+                grid-auto-columns: 1fr; 
+                grid-auto-rows: 1fr; 
+                grid-template-columns: repeat(9, 55px);
+                grid-template-rows: repeat(8, 62px); 
+                gap: 10px 10px; 
+                grid-template-areas: 
+                ". . . . . . . . ."
+                "v1 v1 v1 v1 v2 v2 v2 v2 ."
+                "v1 v1 v1 v1 v2 v2 v2 v2 ."
+                ". v3 v3 v3 v3 v4 v4 v4 v4"
+                ". v3 v3 v3 v3 v4 v4 v4 v4"
+                "v5 v5 v5 v5 v6 v6 v6 v6 ."
+                "v5 v5 v5 v5 v6 v6 v6 v6 ."
+                ". . . . . . . . ."; 
+  
+                #v1 {
+                    grid-area: v1;
+                    transform-origin: 90% 90% 0px;
+                }
+                #v2 {
+                    grid-area: v2;
+                    transform-origin: 10% 90% 0px;
+                }
+                #v3 { 
+                    grid-area: v3;
+                    transform-origin: 10% 50% 0px;
+                }
+                #v4 {
+                    grid-area: v4; 
+                    transform-origin: 90% 50% 0px;
+                }
+                #v5 {
+                    grid-area: v5;
+                    transform-origin: 90% 10% 0px;
+                }
+                #v6 {
+                    grid-area: v6;
+                    transform-origin: 10% 10% 0px;
+                }
+                .Video{
+                    transition: transform 0.3s ease;
+                    background-color: green;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .Estudio{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            gap: 32px;
+            img{
+                transition: transform 0.3s ease;
+                transform-origin: center;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            .EstudioContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+                .EstudioImg{
+                    width: 420px;
+                    height: 199px;
+                    object-position: center center;
+                    object-fit: cover;
+                }
+            }
+            .SalasContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+                .SalasImgCont{
+                    width: 100%;
+                    height: 204px;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 12px;
+                    .SalasImg{
+                        width: 204px;
+                        height: 100%;
+                        object-position: center center;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    .DotPulse {
+        position: absolute;
+        width: 30%;
+        z-index: -1;
+        animation: pulse 1.5s ease-in-out infinite; // Duración total de la animación, incluyendo el retraso
+        overflow-x: hidden;
+        &#p1 {
+            right: -11%;
+            top: -5%;
+        }
+    
+        &#p2 {
+            bottom: -30%;
+            left: -13%;
+        }
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        20% {
+            transform: scale(0.95); // Achicar en el 20% del tiempo
+        }
+        40% {
+            transform: scale(1); // Volver al tamaño original
+        }
+        100% {
+            transform: scale(1); // Mantener el tamaño original durante el resto del tiempo
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body{
+        .Experiencias{
+            min-height: 100%;
+          .ExperienciasContainer{
+              flex-direction: column;
+              align-items: center;
+              min-height: 100%;
+              h3{
+                  font-size: 30px;
+              }
+              .Divider{
+                  transform: none;
+                  top: 105%;
+                  left: 0px;
+              }
+              .Artistas{
+                  width: 100%;
+                  min-height: 100%;
+                  .VideoContainer{
+                  grid-template-columns: repeat(8, 55px);
+                  grid-template-rows: repeat(12, 62px);
+                  grid-template-areas: 
+                  ". . v1 v1 v1 v1 . ."
+                  ". . v1 v1 v1 v1 . ."
+                  ". . v2 v2 v2 v2 . ."
+                  ". . v2 v2 v2 v2 . ."
+                  ". . v3 v3 v3 v3 . ."
+                  ". . v3 v3 v3 v3 . ."
+                  ". . v4 v4 v4 v4 . ."
+                  ". . v4 v4 v4 v4 . ."
+                  ". . v5 v5 v5 v5 . ."
+                  ". . v5 v5 v5 v5 . ."
+                  ". . v6 v6 v6 v6 . ."
+                  ". . v6 v6 v6 v6 . ."; 
+                  gap: 15px;
+                  }
+              }
+              .Estudio{
+                .EstudioContainer{
+                    .EstudioImg{
+                        width: 300px;
+                        height: 199px;
+                        object-position: center center;
+                        object-fit: cover;
+                    }
+                }
+                .SalasContainer{
+                    flex-grow: 1;
+                    .SalasImgCont{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                        .SalasImg{
+                            width: 300px;
+                            height: 204px;
+                            object-position: center center;
+                            object-fit: cover;
+                        }
+                    }
+                }
+              }
+          }
+          .DotPulse{
+              width: 75%;
+              overflow-x: hidden;
+              z-index: -1;
+              overflow: hidden;
+              &#p1{
+                  right: -35%;
+                  top: 0%;
+                  overflow-x: hidden;
+                  overflow: hidden;
+              }
+              &#p2{
+                  bottom: 0%;
+                  left: -30%;
+                  overflow-x: hidden;
+              }
+          }
+        }
+      }
+}
+  
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body{
+      .Experiencias{
+        .ExperienciasContainer{
+            flex-direction: column;
+            align-items: center;
+            h3{
+                font-size: 30px;
+            }
+            .Divider{
+                transform: none;
+                top: 95%;
+                left: 0px;
+            }
+            .Artistas{
+                width: 100%;
+                .VideoContainer{
+                grid-template-columns: repeat(8, 55px);
+                grid-template-areas: 
+                ". . . . . . . ."
+                "v1 v1 v1 v1 v2 v2 v2 v2"
+                "v1 v1 v1 v1 v2 v2 v2 v2"
+                "v3 v3 v3 v3 v4 v4 v4 v4"
+                "v3 v3 v3 v3 v4 v4 v4 v4"
+                "v5 v5 v5 v5 v6 v6 v6 v6"
+                "v5 v5 v5 v5 v6 v6 v6 v6"
+                ". . . . . . . ."; 
+                gap: 15px;
+                }
+            }
+        }
+        .DotPulse{
+            width: 75%;
+            overflow-x: hidden;
+            z-index: -1;
+            overflow: hidden;
+            &#p1{
+                right: -35%;
+                top: 0%;
+                overflow-x: hidden;
+                overflow: hidden;
+            }
+            &#p2{
+                bottom: 0%;
+                left: -30%;
+                overflow-x: hidden;
+            }
+        }
+      }
+    }
+}
+
+/* Desktop (1025px en adelante) */
+@media (min-width: 1025px) {
+    .Hamb{
+        display: none;
+    }
+}
