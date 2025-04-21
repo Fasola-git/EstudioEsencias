@@ -1,6 +1,7 @@
 import '../sass/Experiencias.scss'
 import { useEffect } from 'react';
 
+
 export default function Experiencias() {
 
     const handleMouseEnter = (event) => {
