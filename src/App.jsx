@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './sass/main.scss'
 import Home from './components/Home'
 import Header from './components/Header'
@@ -12,7 +12,7 @@ function App() {
   
   return (
     <>
-        <HashRouter>
+        <BrowserRouter>
         <Header></Header>
           <Routes>
             <Route exact path="/EstudioEsencias/" element={
@@ -26,7 +26,7 @@ function App() {
             <Route exact path="/EstudioEsencias/Nosotros" element={<Nosotros/>}/>
           </Routes>
         <Footer/>
-        </HashRouter>
+        </BrowserRouter>
     </>
   )
 }

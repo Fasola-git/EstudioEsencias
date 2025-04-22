@@ -83,7 +83,7 @@ export default function Header(){
                                         <p>Servicios</p>
                                     </div>
                                 </Link>
-                                <Link to="/Nosotros" onClick={() => handleLinkClick('/EstudioEsencias/Nosotros', 'Nosotros')}>
+                                <Link to="/EstudioEsencias/Nosotros" onClick={() => handleLinkClick('/EstudioEsencias/Nosotros', 'Nosotros')}>
                                     <div className="Animacion"></div>
                                     <div className="TextoNav">
                                         <p>Nosotros</p>
