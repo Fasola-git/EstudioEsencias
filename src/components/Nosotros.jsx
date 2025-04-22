@@ -14,7 +14,7 @@ export default function Nosotros(){
                     <p>Contando con gran experiencia, hoy en día se consolida como uno de los estudios más reconocidos de Tucumán. También cuenta con producciones para artistas del exterior (España, Chile, Perú, Costa Rica…) debido a que es buscado por su calidad de sonido y atención personalizada en cada proyecto haciéndolos propios para acompañar con empatía los sueños de cada artista.</p>
                     <p>El equipo está compuesto por productores, ingenieros de sonido, músicos, arreglistas y diseñadores de sonido, quienes trabajan juntos para crear grabaciones que reflejen la visión artística de cada cliente. Además, el estudio cuenta con una amplia variedad de equipos de ultima generación y una acústica impecable para garantizar un sonido de alta calidad.</p>
                 </div>
-                <img src="../../public/img/Guitarra-blanca.png" className='Guitarra' alt="guitarrablanca" />
+                <img src="/EstudioEsencias/img/Guitarra-blanca.png" className='Guitarra' alt="guitarrablanca" />
             </div>
             <div className='DivRoomControls'>
                 <div className='Titulo'>
@@ -22,21 +22,21 @@ export default function Nosotros(){
                     <h3 className='Subtitulo'>Donde se <span>hace</span> la magia.</h3>
                 </div>
                 <div className='ImgRoomControl'>
-                    <img src="../../public/img/Rooms-control.jpg" className='Room' alt="roomscontrol" />
-                    <img src="../../public/img/Teclado.png" className='Teclado' alt="teclado" />
-                    <img src="../../public/img/auriculares-negros.png" className='AuricularesNeg' alt="auricularesnegros" />
+                    <img src="/EstudioEsencias/img/Rooms-control.jpg" className='Room' alt="roomscontrol" />
+                    <img src="/EstudioEsencias/img/Teclado.png" className='Teclado' alt="teclado" />
+                    <img src="/EstudioEsencias/img/auriculares-negros.png" className='AuricularesNeg' alt="auricularesnegros" />
                 </div>
-                <img src="../../public/img/Dot-pulse.png" className='DotPulse' alt="PulseDot" />
+                <img src="/EstudioEsencias/img/Dot-pulse.png" className='DotPulse' alt="PulseDot" />
             </div>
             <div className='DivControlRec'>
-                <img src="../../public/img/Dot-pulse.png" className='DotPulse' alt="PulseDot" />
+                <img src="/EstudioEsencias/img/Dot-pulse.png" className='DotPulse' alt="PulseDot" />
                 <div className='Titulo'>
                     <h2>CONTROL REC</h2>
                     <h3 className='Subtitulo'>Sala de <span>grabación</span> / Check <span>Video</span></h3>
                 </div>
                 <div className='ImgControlRec'>
-                    <img src="../../public/img/Control-1.jpg" alt="control1" />
-                    <img src="../../public/img/Control-2.jpg" alt="control2" />
+                    <img src="/EstudioEsencias/img/Control-1.jpg" alt="control1" />
+                    <img src="/EstudioEsencias/img/Control-2.jpg" alt="control2" />
                 </div>
             </div>
         </section>

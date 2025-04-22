@@ -15,7 +15,7 @@ function App() {
         <HashRouter>
         <Header></Header>
           <Routes>
-            <Route exact path="/" element={
+            <Route exact path="/EstudioEsencias/" element={
             <>
               <Home/>
               <Servicios/>
@@ -23,7 +23,7 @@ function App() {
               <Contacto/>
             </>
             }/>
-            <Route exact path="/Nosotros" element={<Nosotros/>}/>
+            <Route exact path="/EstudioEsencias/Nosotros" element={<Nosotros/>}/>
           </Routes>
         <Footer/>
         </HashRouter>

@@ -64,8 +64,8 @@ export default function Experiencias() {
                 <h2>EXPERIENCIAS</h2>
                 <h3 className='Subtitulo'>El arte de <span>capturar</span> momentos musicales.</h3>
             </div>
-            <img src="../../public/img/Dot-pulse.png" className='DotPulse' id='p1' alt="PulseDot" />
-            <img src="../../public/img/Dot-pulse.png" className='DotPulse' id='p2' alt="PulseDot" />
+            <img src="/EstudioEsencias/img/Dot-pulse.png" className='DotPulse' id='p1' alt="PulseDot" />
+            <img src="/EstudioEsencias/img/Dot-pulse.png" className='DotPulse' id='p2' alt="PulseDot" />
             <div className="ExperienciasContainer">
                 <div className="Artistas">
                     <div>
@@ -85,13 +85,13 @@ export default function Experiencias() {
                 <div className="Estudio">
                     <div className='EstudioContainer'>
                         <h3>Nuestro estudio</h3>
-                        <img src="../../public/img/Estudio-1.jpg" className='EstudioImg' alt="Estudio" />
+                        <img src="/EstudioEsencias/img/Estudio-1.jpg" className='EstudioImg' alt="Estudio" />
                     </div>
                     <div className='SalasContainer'>
                         <h3>Salas</h3>
                         <div className='SalasImgCont'>
-                            <img src="../../public/img/Salas-1.jpg" className='SalasImg' alt="salas1" />
-                            <img src="../../public/img/Salas-2.jpg" className='SalasImg' alt="salas2" />
+                            <img src="/EstudioEsencias/img/Salas-1.jpg" className='SalasImg' alt="salas1" />
+                            <img src="/EstudioEsencias/img/Salas-2.jpg" className='SalasImg' alt="salas2" />
                         </div>
                     </div>
                 </div>

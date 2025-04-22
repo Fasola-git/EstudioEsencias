@@ -6,7 +6,7 @@ export default function Home(){
         <>
         <section className="Home" id="Home" >
             <div className='Container1'>
-                <img className="Logo" src="../../public/img/Logo.svg" alt="logo" />
+                <img className="Logo" src="/EstudioEsencias/img/Logo.svg" alt="logo" />
                 <div className='TituloContainer'>
                     <div className="light"></div>
                     <h1>Estudio</h1>
@@ -21,7 +21,7 @@ export default function Home(){
                 </a>
             </div>
             <div className='background'>
-                <video className="video-background" src="../../public/img/Banner-Video.mov" autoPlay muted loop disablePictureInPicture type="video/mp4"/>
+                <video className="video-background" src="/EstudioEsencias/img/Banner-Video.mov" autoPlay muted loop disablePictureInPicture type="video/mp4"/>
             </div>
         </section>
         </>

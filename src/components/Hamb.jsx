@@ -50,7 +50,7 @@ export default function Hamb({ onLinkClick }) {
         <div className='MobNav'>
           <div className='MobIcon'>
               <Link to={"/"} className="Logo" onClick={() => handleLinkClick('/', 'Home')}>
-                  <img src="../../public/img/Logo.svg" alt="Logo" />
+                  <img src="/EstudioEsencias/img/Logo.svg" alt="Logo" />
               </Link>
           </div>
           <div className='HambIcon' onClick={toggleClass}>

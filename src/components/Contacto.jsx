@@ -55,7 +55,7 @@ export default function Contacto() {
             <section className="Contacto" id="Contacto" >
                 <div className='DivForm'>
                     <div className='BackgroundForm'>
-                        <img src="../../public/img/Linea-Contacto.png" alt="fondocontacto" />
+                        <img src="/EstudioEsencias/img/Linea-Contacto.png" alt="fondocontacto" />
                     </div>
                     <div className='Titulo'>
                         <h2>CONTACTO</h2>
@@ -105,7 +105,7 @@ export default function Contacto() {
                 <div className='DivRedes'>
                     <h3>Nuestras redes sociales</h3>
                     <div className='BackgroundRedes' style={{ transform: discoTransform }}>
-                        <img src="../../public/img/disco-vinilo.png" alt="discovinilo" />
+                        <img src="/EstudioEsencias/img/disco-vinilo.png" alt="discovinilo" />
                     </div>
                     <div className='RedesCont'>
                         <div className='RedesDiscosCont'>
@@ -123,7 +123,7 @@ export default function Contacto() {
                                 }}>
                                 <i className="fa-brands fa-youtube"></i>
                                 <div className='DiscoCont'>
-                                    <img src="../../public/img/disco-vinilo.png" alt="" />
+                                    <img src="/EstudioEsencias/img/disco-vinilo.png" alt="" />
                                 </div>
                             </a>
                             <a className='DiscoRed Ig'
@@ -140,7 +140,7 @@ export default function Contacto() {
                                 }}>
                                 <i className="fa-brands fa-square-instagram"></i>
                                 <div className='DiscoCont'>
-                                    <img src="../../public/img/disco-vinilo.png" alt="" />
+                                    <img src="/EstudioEsencias/img/disco-vinilo.png" alt="" />
                                 </div>
                             </a>
                             <a className='DiscoRed Fb'
@@ -157,7 +157,7 @@ export default function Contacto() {
                                 }}>
                                 <i className="fa-brands fa-square-facebook"></i>
                                 <div className='DiscoCont'>
-                                    <img src="../../public/img/disco-vinilo.png" alt="" />
+                                    <img src="/EstudioEsencias/img/disco-vinilo.png" alt="" />
                                 </div>
                             </a>
                         </div>
@@ -165,7 +165,7 @@ export default function Contacto() {
                             <div className='RepCont'>
                                 <div className='Reproductor'>
                                     <div className='Miniatura'>
-                                        <img src="../../public/img/Logo.svg" alt="logoestudio" className={`LogoEstudio ${activeVideo == null ? 'active' : ''}`} style={{ opacity: visibleVideo !== null ? 0 : 1}} />
+                                        <img src="/EstudioEsencias/img/Logo.svg" alt="logoestudio" className={`LogoEstudio ${activeVideo == null ? 'active' : ''}`} style={{ opacity: visibleVideo !== null ? 0 : 1}} />
                                         <div className={`VideoMini1 ${activeVideo === 'v1' ? 'active' : ''}`} style={{ display: visibleVideo === 'v1' ? 'block' : 'none'}}>
                                             <iframe src="https://www.youtube-nocookie.com/embed/sMrGnlGnQ80?controls=0&modestbranding=1&rel=0&iv_load_policy=3&disablekb=1" className='Video' title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                         </div>
@@ -192,7 +192,7 @@ export default function Contacto() {
                 </div>
                 <div className='DivUbicacion'> 
                     <div className='BackgroundUbi' style={{ transform: auricularesTransform }}>
-                        <img src="../../public/img/auriculares-blancos.png" alt="Auriculares Blancos" />
+                        <img src="/EstudioEsencias/img/auriculares-blancos.png" alt="Auriculares Blancos" />
                     </div>
                     <div className='MapCont'>
                         <div className='TextoCont'>

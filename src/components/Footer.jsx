@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import '../sass/Footer.scss'
 
 export default function Footer(){
@@ -7,13 +6,13 @@ export default function Footer(){
         <>
             <footer className="Footer">
                 <div className="BackgroundFooter">
-                    <img src="../../public/img/Footer-Fondo.jpg" alt="FooterFondo" />
+                    <img src="/EstudioEsencias/img/Footer-Fondo.jpg" alt="FooterFondo" />
                 </div>
                 <div className="FooterCont">
                     <div className="LogoyTexto">
                         <div className="Logo">
                             <div className="ImgCont">
-                                <img src="../../public/img/Logo-blanco.svg" alt="LogoBlanco" />
+                                <img src="/EstudioEsencias/img/Logo-blanco.svg" alt="LogoBlanco" />
                             </div>
                             <div className="TextoLogo">
                                 <p>Estudio</p>

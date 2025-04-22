@@ -31,14 +31,14 @@ export default function Header(){
     
 
     const handleLinkClick = (path, targetId) => {
-        if (location.pathname === '/' && path!=location.pathname) {
+        if (location.pathname === '/EstudioEsencias/' && path!=location.pathname) {
             // Si estamos en la principal y queremos ir a otra página
             navigate(path);
             // Agrega un pequeño retraso antes de hacer el scrollTo para asegurarte de que la página haya cambiado
             setTimeout(() => {
                 handleNavigation(targetId);
             }, 100);
-        }else if(location.pathname === '/' && path===location.pathname){
+        }else if(location.pathname === '/EstudioEsencias/' && path===location.pathname){
             // Si estamos en la página principal, realiza el scrollTo al elemento
             handleNavigation(targetId);
         
@@ -63,8 +63,8 @@ export default function Header(){
                 <div className="Header-divider">
                     <div className="Header">
                         <div className="Left">
-                            <Link to={"/"} className="Logo" onClick={() => handleLinkClick('/', 'Home')}>
-                                <img src="../../public/img/Logo.svg" alt="Logo" />
+                            <Link to={"/EstudioEsencias/"} className="Logo" onClick={() => handleLinkClick('/EstudioEsencias/', 'Home')}>
+                                <img src="/EstudioEsencias/img/Logo.svg" alt="Logo" />
                             </Link>
                             <div className="RedesContainer">
                                 <div className="Redes">
@@ -77,25 +77,25 @@ export default function Header(){
                         </div>
                         <div className="Right">
                             <nav>
-                                <Link to="/" onClick={() => handleLinkClick('/', 'Servicios')}>
+                                <Link to="/EstudioEsencias/" onClick={() => handleLinkClick('/EstudioEsencias/', 'Servicios')}>
                                     <div className="Animacion"></div>
                                     <div className="TextoNav">
                                         <p>Servicios</p>
                                     </div>
                                 </Link>
-                                <Link to="/Nosotros" onClick={() => handleLinkClick('/Nosotros', 'Nosotros')}>
+                                <Link to="/Nosotros" onClick={() => handleLinkClick('/EstudioEsencias/Nosotros', 'Nosotros')}>
                                     <div className="Animacion"></div>
                                     <div className="TextoNav">
                                         <p>Nosotros</p>
                                     </div>
                                 </Link>
-                                <Link to="/" onClick={() => handleLinkClick('/', 'Experiencias')}>
+                                <Link to="/EstudioEsencias/" onClick={() => handleLinkClick('/EstudioEsencias/', 'Experiencias')}>
                                     <div className="Animacion"></div>
                                     <div className="TextoNav">
                                         <p>Experiencias</p>
                                     </div>
                                 </Link>
-                                <Link to="/" onClick={() => handleLinkClick('/', 'Contacto')}>
+                                <Link to="/EstudioEsencias/" onClick={() => handleLinkClick('/EstudioEsencias/', 'Contacto')}>
                                     <div className="Animacion"></div>
                                     <div className="TextoNav">
                                         <p>Contacto</p>
