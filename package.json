@@ -12,7 +12,7 @@
     "build:css": "postcss src/sass/main.scss -o src/sass/main.css",
     "watch:css": "postcss src/sass/main.scss -o src/sass/main.css --watch",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "perlin-noise": "^0.0.1",
